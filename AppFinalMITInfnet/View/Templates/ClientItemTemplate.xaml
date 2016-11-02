@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="AppFinalMITInfnet.ClientItemTemplate"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+             xmlns:local="clr-namespace:AppFinalMITInfnet;assembly=AppFinalMITInfnet">
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0,10"
+                     TranslationX="10">
+            <artina:CircleImage Source="{ Binding Picture.Medium }" Style="{x:Static local:AppConstants.Avatar }" />
+            <Label VerticalOptions="CenterAndExpand" Text="{ Binding Name.FirstCapitalized }" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

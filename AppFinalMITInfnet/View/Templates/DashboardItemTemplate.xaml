@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="AppFinalMITInfnet.DashboardItemTemplate"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+             xmlns:local="clr-namespace:AppFinalMITInfnet;assembly=AppFinalMITInfnet"
+             x:Name="Root"
+             BackgroundColor="{x:Static local:AppConstants.DefaultBackgroundColor}">
+    <ContentView.Content>
+        <Grid Padding="0">
+            <BoxView HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     BackgroundColor="{Binding BackgroundColor}"
+                     IsVisible="{Binding Source={x:Reference Root}, Path=ShowBackgroundColor}" />
+
+            <Image HorizontalOptions="Fill"
+                   VerticalOptions="Fill"
+                   Aspect="AspectFill"
+                   IsVisible="{Binding Source={x:Reference Root}, Path=ShowBackgroundImage}"
+                   Opacity=".4"
+                   Source="{MenuItemBackgroundImage}" />
+
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="Center"
+                         Orientation="Vertical"
+                         Spacing="10">
+                <Grid>
+
+                    <Label HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="60"
+                           HorizontalTextAlignment="Center"
+                           IsVisible="{Binding Source={x:Reference Root}, Path=ShowiconColoredCircleBackground}"
+                           Opacity="1"
+                           Style="{x:Static local:AppConstants.FontIcon}"
+                           Text="&#xf111;"
+                           TextColor="{BackgroundColor}" />
+
+                    <Label HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="25"
+                           HorizontalTextAlignment="Center"
+                           Opacity="1"
+                           Style="{x:Static local:AppConstants.FontIcon}"
+                           Text="{MenuItemIco}"
+                           TextColor="White" />
+                </Grid>
+
+                <Label FontSize="14"
+                       HorizontalTextAlignment="Center"
+                       Text="{MenuItemName}"
+                       TextColor="{Binding Source={x:Reference Root}, Path=TextColor}" />
+            </StackLayout>
+
+        </Grid>
+    </ContentView.Content>
+    <ContentView.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding ChooseCorrectPageCommand}" CommandParameter="{Binding .}" />
+    </ContentView.GestureRecognizers>
+</ContentView>

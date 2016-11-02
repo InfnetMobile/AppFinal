@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="AppFinalMITInfnet.Views.LoginPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppFinalMITInfnet;assembly=AppFinalMITInfnet"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             BackgroundColor="{local:AppConstants.DefaultBackgroundColor}"
+             BackgroundImage="login.png">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     Spacing="40">
+            <StackLayout.Children>
+                <local:CustomLoginEntry Margin="12,0,12,0"
+                                        Placeholder="Digite o seu usuário"
+                                        Text="{Binding Username}" />
+                <local:CustomLoginEntry Margin="12,0,12,0"
+                                        Placeholder="Digite a sua senha"
+                                        Text="{Binding Password}" />
+                <Button Margin="20,0,20,0"
+                        BackgroundColor="{x:Static local:AppConstants.LoginButtonColor}"
+                        BorderColor="{x:Static local:AppConstants.LoginButtonColor}"
+                        BorderRadius="5"
+                        BorderWidth="3"
+                        Command="{Binding Confirm}"
+                        Text="ENTRAR"
+                        TextColor="White" />
+            </StackLayout.Children>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

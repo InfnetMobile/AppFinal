@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="AppFinalMITInfnet.Views.ClientListPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+             xmlns:local="clr-namespace:AppFinalMITInfnet;assembly=AppFinalMITInfnet"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:templates="clr-namespace:UXDivers.Artina.Grial;assembly=UXDivers.Artina.Grial"
+             x:Name="page"
+             prism:ViewModelLocator.AutowireViewModel="True">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:TextChangedEventArgsToTextChangedConverter x:Key="TextChangedConverter" />
+            <local:ItemTappedEventArgsToItemTappedConverter x:Key="ItemTappedConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Margin="5,20,5,0">
+            <!--  CLIENTS LIST  -->
+            <local:CustomListViewSeparatorRenderer x:Name="customListView"
+                                                   ItemsSource="{Binding Clients}"
+                                                   RowHeight="66">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <local:ClientItemTemplate />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <x:Arguments>
+                    <ListViewCachingStrategy>RecycleElement</ListViewCachingStrategy>
+                </x:Arguments>
+
+               
+
+            </local:CustomListViewSeparatorRenderer>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
