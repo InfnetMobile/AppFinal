@@ -24,6 +24,7 @@ namespace AppFinalMITInfnet.Droid
 
             LoadApplication(new App());
             //Teste de commit no branch correto.
+            //Teste2 de commit no branch correto.
         }
     }
 }
