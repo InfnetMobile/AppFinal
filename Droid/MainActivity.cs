@@ -23,6 +23,7 @@ namespace AppFinalMITInfnet.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
+            //Teste de commit no branch correto.
         }
     }
 }
