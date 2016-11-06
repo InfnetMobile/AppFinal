@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -86,6 +86,10 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Humanizer, Version=2.0.1.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.0.1\lib\dotnet\Humanizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -165,9 +169,6 @@
     <Reference Include="UXDivers.Artina.Shared.iOS">
       <HintPath>..\GrialUI\ios-unified\UXDivers.Artina.Shared.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Humanizer">
-      <HintPath>..\packages\Humanizer.Core.2.1.0\lib\netstandard1.0\Humanizer.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AppFinalMITInfnet\AppFinalMITInfnet.csproj">
@@ -176,22 +177,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="Renderers\" />
-    <Folder Include="DependencyService\" />
-    <Folder Include="Properties\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
