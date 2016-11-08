@@ -19,7 +19,12 @@ namespace AppFinalMITInfnet
 
         protected override void RegisterTypes()
         {
+            Container.RegisterTypeForNavigation<ClientDetailPage>();
+            Container.RegisterTypeForNavigation<ClientListPage>();
+            Container.RegisterTypeForNavigation<HomePage>();
             Container.RegisterTypeForNavigation<LoginPage>();
+            Container.RegisterTypeForNavigation<ProductDetailPage>();
+            Container.RegisterTypeForNavigation<ProductListPage>();
         }
     }
 }
