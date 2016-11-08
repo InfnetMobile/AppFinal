@@ -25,6 +25,10 @@ namespace AppFinalMITInfnet
             Container.RegisterTypeForNavigation<LoginPage>();
             Container.RegisterTypeForNavigation<ProductDetailPage>();
             Container.RegisterTypeForNavigation<ProductListPage>();
+
+            Container.RegisterType<IBaseApplicationService<Result>, BaseApplicationService<Result>>();
+            Container.RegisterType<IBaseApplicationService<User>, BaseApplicationService<User>>();
+            Container.RegisterType<IApiService<RootObject>, ApiService<RootObject>>();
         }
     }
 }
