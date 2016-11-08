@@ -14,7 +14,9 @@ namespace AppFinalMITInfnet
 
         protected override void OnInitialized()
         {
-            NavigationService.NavigateAsync("ClientListPage");
+            //TODO: Identificar qual é a página inicial.
+            //NavigationService.NavigateAsync("ClientListPage");
+            NavigationService.NavigateAsync("LoginPage");
         }
 
         protected override void RegisterTypes()
@@ -29,6 +31,8 @@ namespace AppFinalMITInfnet
             Container.RegisterType<IBaseApplicationService<Result>, BaseApplicationService<Result>>();
             Container.RegisterType<IBaseApplicationService<User>, BaseApplicationService<User>>();
             Container.RegisterType<IApiService<RootObject>, ApiService<RootObject>>();
+
+            Container.RegisterInstance<IUserDialogs>(UserDialogs.Instance);
         }
     }
 }
