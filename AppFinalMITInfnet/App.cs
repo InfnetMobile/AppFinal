@@ -31,6 +31,8 @@ namespace AppFinalMITInfnet
             Container.RegisterType<IBaseApplicationService<Result>, BaseApplicationService<Result>>();
             Container.RegisterType<IBaseApplicationService<User>, BaseApplicationService<User>>();
             Container.RegisterType<IApiService<RootObject>, ApiService<RootObject>>();
+            Container.RegisterType<IBaseRepository<Result>, BaseRepository<Result>>();
+            Container.RegisterType<IBaseRepository<User>, BaseRepository<User>>();
 
             Container.RegisterInstance<IUserDialogs>(UserDialogs.Instance);
         }
