@@ -18,7 +18,24 @@ namespace XamarinTestExample.ViewModels
         public DelegateCommand ShowDatePickerCmd { get; set; }
         public bool IsMsgInfoCompleted { get; set; }
 
+        public HomePageViewModel(INavigationService navigationService
+                                , IPageDialogService pageDialogServie
+                                , Acr.UserDialogs.IUserDialogs userDialogs)
+        {
+            
+            _navigationService = navigationService;
+            _pageDialogService = pageDialogServie;
+            _userDialogs = userDialogs;
+
+          
+            SaveUserInfoCmd = new DelegateCommand(SaveUser);
+            ShowDatePickerCmd = new DelegateCommand(ShowDatePicker);
+        }
+
         string _firstname;
+
+
+
         public string FirstName
         {
             get { return _firstname; }
@@ -78,6 +95,7 @@ namespace XamarinTestExample.ViewModels
                 return new Action(() =>
                 {
                     _userDialogs.DatePrompt(DateConfig);
+                    
                 });
             }
         }
@@ -86,14 +104,14 @@ namespace XamarinTestExample.ViewModels
         {
             get
             {
-                return new Action(() =>
+                return new Action(async () =>
                 {
                     if (IsValid)
                         IsMsgInfoCompleted = true;
                     else
                         IsMsgInfoCompleted = false;
 
-                    //await NavigateTo();
+                    await NavigateTo();
                 });
             }
         }
@@ -130,17 +148,7 @@ namespace XamarinTestExample.ViewModels
             throw new NotImplementedException();
         }
 
-        public HomePageViewModel(INavigationService navigationService
-                                , IPageDialogService pageDialogServie
-                                , Acr.UserDialogs.IUserDialogs userDialogs)
-        {
-            _navigationService = navigationService;
-            _pageDialogService = pageDialogServie;
-            _userDialogs = userDialogs;
-
-            SaveUserInfoCmd = new DelegateCommand(SaveUser);
-            ShowDatePickerCmd = new DelegateCommand(ShowDatePicker);
-        }
+        
 
         bool IsValid
         {

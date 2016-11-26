@@ -3,13 +3,15 @@ using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
+using Acr.UserDialogs;
 
 namespace XamarinTestExample.ViewModels
 {
     public class UserInfoConfirmationPageViewModel : BindableBase
     {
         readonly INavigationService _navigationService;
-        readonly Acr.UserDialogs.IUserDialogs _userDialogs;
+        readonly IUserDialogs _userDialogs;
+        readonly IPageDialogService _pageDialogService;
 
         public DelegateCommand SaveUserInfoCmd { get; set; }
         public DelegateCommand BackToUserInfoCmd { get; set; }
@@ -96,10 +98,11 @@ namespace XamarinTestExample.ViewModels
         }
 
         public UserInfoConfirmationPageViewModel(INavigationService navigationService, 
-            Acr.UserDialogs.IUserDialogs userDialogs)
+            IUserDialogs userDialogs, IPageDialogService pageDialogServie)
         {
             _navigationService = navigationService;
             _userDialogs = userDialogs;
+            _pageDialogService = pageDialogServie;
         }
 
         NavigationParameters AddParameters()
