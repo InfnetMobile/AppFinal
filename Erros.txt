@@ -1,0 +1,33 @@
+App Final InfNet
+
+- Erros quando abri o projeto pela primeira vez no visual studio
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error		Position 21:20. Type MenuItemBackgroundImage not found in xmlns http://xamarin.com/schemas/2014/forms	AppFinalMITInfnet	C:\Projects\Pos Graduacao\AppFinal\AppFinalMITInfnet\AppFinalMITInfnet.View.Templates.DashboardItemTemplate.xaml	21	
+Error		Position 8:14. Type AppConstants.DefaultBackgroundColor not found in xmlns clr-namespace:AppFinalMITInfnet;assembly=AppFinalMITInfnet	AppFinalMITInfnet	C:\Projects\Pos Graduacao\AppFinal\AppFinalMITInfnet\AppFinalMITInfnet.View.LoginPage.xaml	8	
+Error		Position 9:14. Type AppConstants.DefaultBackgroundColor not found in xmlns clr-namespace:AppFinalMITInfnet;assembly=AppFinalMITInfnet	AppFinalMITInfnet	C:\Projects\Pos Graduacao\AppFinal\AppFinalMITInfnet\AppFinalMITInfnet.View.HomePage.xaml	9	
+Error		Unexpected error - Please file a bug report at http://bugzilla.xamarin.com. Reason: System.IO.FileNotFoundException: Could not load assembly 'AppFinalMITInfnet, Version=, Culture=neutral, PublicKeyToken='. Perhaps it doesn't exist in the Mono for Android profile?	AppFinalMITInfnet.Droid			
+
+
+-> Atualizei o Xamarin;
+-> Atualizei os pacotes do Nuget
+
+-> Coloquei os Bindings que faltavam no DashboardItemTemplate;
+-> Mudei os BackgroundColor para  BackgroundColor="{x:Static local:AppConstants.DefaultBackgroundColor}" em LoginPage.xaml e HomePage.xaml
+
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0012	The type 'PrismApplication' is defined in an assembly that is not referenced. You must add a reference to assembly 'Prism.Unity.Forms, Version=6.2.0.0, Culture=neutral, PublicKeyToken=null'.	AppFinalMITInfnet.Droid	C:\Projects\Pos Graduacao\AppFinal\Droid\MainActivity.cs	25	Active
+
+Referenciei o Prism.Unity.Forms e resolveu.
+Setei o projeto android como o Startup Project
+
+
+149 erros no Resource.designer.cs > Atualizei o pacote do Xamarin.Forms 
+
+
+
+Error	java.lang.UnsupportedClassVersionError: com/android/dx/command/Main  :  Unsupported major.minor version 52.0	AppFinalMITInfnet.Droid	C:\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets	2066	
+Li que seria um erro da API 24 (Android 7.0)
+
