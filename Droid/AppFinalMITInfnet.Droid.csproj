@@ -170,11 +170,15 @@
   <ItemGroup>
     <Compile Include="DependencyService\SQLiteConnection_Android.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\AwesomeRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <AndroidAsset Include="Assets\fontawesome-webfont.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
