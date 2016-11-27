@@ -4,10 +4,10 @@ namespace AppFinalMITInfnet
 {
     public class CustomLoginEntry : Entry
     {
-        public static readonly BindableProperty BorderColorProperty =
-            BindableProperty.Create<CustomLoginEntry, Color>(p => p.BorderColor, Color.White);
+		private static readonly BindableProperty borderColorProperty =
+			BindableProperty.Create<CustomLoginEntry, Color>(p => p.BorderColor, Color.White);
 
-        public Color BorderColor
+		public Color BorderColor
         {
             get { return (Color)GetValue(BorderColorProperty); }
             set { SetValue(BorderColorProperty, value); }
@@ -30,5 +30,13 @@ namespace AppFinalMITInfnet
             get { return (Color)GetValue(PlaceholderColorProperty); }
             set { SetValue(PlaceholderColorProperty, value); }
         }
-    }
+
+		public static BindableProperty BorderColorProperty
+		{
+			get
+			{
+				return borderColorProperty;
+			}
+		}
+	}
 }

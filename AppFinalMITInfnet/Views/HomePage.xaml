@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:AppFinalMITInfnet;assembly=AppFinalMITInfnet"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             BackgroundColor="{local:AppConstants.DefaultBackgroundColor}">
+             BackgroundColor="{x:Static local:AppConstants.DefaultBackgroundColor}">
 
     <ContentPage.Content>
         <artina:GridOptionsView VerticalOptions="FillAndExpand"
