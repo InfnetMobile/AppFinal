@@ -1,3 +1,5 @@
+`Márcio e Michael: Comentários estão no texto abaixo em estilo de código.`
+
 # App Final - MIT Infnet
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
@@ -17,8 +19,14 @@ Boa noite pessoal. Aqui esta o nosso App, nele foram utilizados os seguintes tó
 
 Vocês deverão:
   - Corrigir o APP e torná-lo utilizável em ao menos uma plataforma (ideal tanto no iOS quanto no Android)
+
+`Márcio e Michael: Trabalhamos apenas na plataforma Android.`
   - Apontar em qual arquivo e linha estava o erro e qual era
+  
+`Márcio e Michael: Histórico de alterações disponíveis nos commits.`
   - Apontar qual fora a solução aplicada
+  
+`Márcio e Michael: Os commits tem comentários descrevendo as alterações.`
 
 Após a conclusão do trabalho, por favor criem BRANCHS com os nomes das duplas, ex: Rodrigo&Thiago. Assim eu consiguirei pegar o código de cada um ou cada dupla. POR FAVOR ATENÇÃO AO ENVIAR, CRIAR UMA BRANCH NOVA NO REPOSITÓRIO SEGUINDO O PADRÃO DE NOME E FAZER O PUSH NESTA BRANCH 
 
