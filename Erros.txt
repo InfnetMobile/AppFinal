@@ -29,5 +29,11 @@ Setei o projeto android como o Startup Project
 
 
 Error	java.lang.UnsupportedClassVersionError: com/android/dx/command/Main  :  Unsupported major.minor version 52.0	AppFinalMITInfnet.Droid	C:\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets	2066	
-Li que seria um erro da API 24 (Android 7.0)
+Li que seria um erro da API 24 (Android 7.0) - Deletando tudo relacionado a API 24
 
+---------------
+Depois do primeiro primeiro commit deu merge, a solução parou e o SDK manager "sumiu" 
+
+Error		Could not find android.jar for API Level 25. This means the Android SDK platform for API Level 25 is not installed. Either install it in the Android SDK Manager (Tools > Open Android SDK Manager...), or change your Xamarin.Android project to target an API version that is installed. (C:\Program Files (x86)\Android\android-sdk\platforms\android-25\android.jar missing.)	AppFinalMITInfnet.Droid	C:\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets	529	
+
+> Reinstalando o android sdk manualmente
