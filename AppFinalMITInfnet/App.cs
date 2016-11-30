@@ -12,14 +12,25 @@ namespace AppFinalMITInfnet
         public static HttpClient HttpClientInstance;
         public static bool IsConnected;
 
+		public App()
+		{
+			MainPage = new LoginPage();
+		}
+
+
         protected override void OnInitialized()
         {
-            NavigationService.NavigateAsync("ClientListPage");
+            NavigationService.NavigateAsync("LoginPage");
         }
 
         protected override void RegisterTypes()
         {
             Container.RegisterTypeForNavigation<LoginPage>();
+			Container.RegisterTypeForNavigation<HomePage>();
+			Container.RegisterTypeForNavigation<ClientListPage>();
+			Container.RegisterTypeForNavigation<ClientDetailPage>();
+			Container.RegisterTypeForNavigation<ProductListPage>();
+			Container.RegisterTypeForNavigation<ProductDetailPage>();
         }
     }
 }
