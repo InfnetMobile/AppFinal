@@ -34,6 +34,9 @@ namespace AppFinalMITInfnet
 
 			Container.RegisterInstance(Acr.UserDialogs.UserDialogs.Instance);
 
+			Container.RegisterType(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+			Container.RegisterType(typeof(IBaseApplicationService<>), typeof(BaseApplicationService<>));
+			Container.RegisterType(typeof(IApiService<>), typeof(ApiService<>));
         }
     }
 }
