@@ -31,6 +31,9 @@ namespace AppFinalMITInfnet
 			Container.RegisterTypeForNavigation<ClientDetailPage>();
 			Container.RegisterTypeForNavigation<ProductListPage>();
 			Container.RegisterTypeForNavigation<ProductDetailPage>();
+
+			Container.RegisterInstance(Acr.UserDialogs.UserDialogs.Instance);
+
         }
     }
 }
