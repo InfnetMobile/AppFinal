@@ -17,7 +17,6 @@ namespace AppFinalMITInfnet
 			MainPage = new LoginPage();
 		}
 
-
         protected override void OnInitialized()
         {
             NavigationService.NavigateAsync("LoginPage");
@@ -25,6 +24,9 @@ namespace AppFinalMITInfnet
 
         protected override void RegisterTypes()
         {
+
+			Container.RegisterInstance(Acr.UserDialogs.UserDialogs.Instance);
+
             Container.RegisterTypeForNavigation<LoginPage>();
 			Container.RegisterTypeForNavigation<HomePage>();
 			Container.RegisterTypeForNavigation<ClientListPage>();
@@ -32,11 +34,12 @@ namespace AppFinalMITInfnet
 			Container.RegisterTypeForNavigation<ProductListPage>();
 			Container.RegisterTypeForNavigation<ProductDetailPage>();
 
-			Container.RegisterInstance(Acr.UserDialogs.UserDialogs.Instance);
+			Container.RegisterType(typeof(IBaseApplicationService<User>), typeof(BaseApplicationService<User>));
+			Container.RegisterType(typeof(IBaseApplicationService<Result>), typeof(BaseApplicationService<Result>));
+			Container.RegisterType(typeof(IBaseRepository<User>), typeof(BaseRepository<User>));
+			Container.RegisterType(typeof(IBaseRepository<Result>), typeof(BaseRepository<Result>));
+			Container.RegisterType(typeof(IApiService<RootObject>), typeof(ApiService<RootObject>));
 
-			Container.RegisterType(typeof(IBaseRepository<>), typeof(BaseRepository<>));
-			Container.RegisterType(typeof(IBaseApplicationService<>), typeof(BaseApplicationService<>));
-			Container.RegisterType(typeof(IApiService<>), typeof(ApiService<>));
         }
     }
 }

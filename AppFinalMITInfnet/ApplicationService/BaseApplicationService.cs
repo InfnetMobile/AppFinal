@@ -9,9 +9,9 @@ namespace AppFinalMITInfnet
     {
         readonly IBaseRepository<T> _repository;
 
-        public BaseApplicationService()
+        public BaseApplicationService(IBaseRepository<T> repository)
         {
-            
+			_repository = repository;
         }
 
         public void Delete(T TEntity)

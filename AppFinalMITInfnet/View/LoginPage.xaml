@@ -13,10 +13,12 @@
             <StackLayout.Children>
                 <local:CustomLoginEntry Margin="12,0,12,0"
                                         Placeholder="Digite o seu usuário"
-                                        Text="{Binding Username}" />
+                                        Text="{Binding Username}"
+                        				TextColor="White" />
                 <local:CustomLoginEntry Margin="12,0,12,0"
                                         Placeholder="Digite a sua senha"
-                                        Text="{Binding Password}" />
+                                        Text="{Binding Password}"
+                        				TextColor="White" />
                 <Button Margin="20,0,20,0"
                         BackgroundColor="{x:Static local:AppConstants.LoginButtonColor}"
                         BorderColor="{x:Static local:AppConstants.LoginButtonColor}"
