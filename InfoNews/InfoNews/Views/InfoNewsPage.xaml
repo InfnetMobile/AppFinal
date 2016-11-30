@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:InfoNews" 
+		x:Class="InfoNews.InfoNewsPage"
+		Title="{Binding Name}">
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Info" Clicked="BtnInfo" x:Name="viewInfoUsuario" />
+		<ToolbarItem Text="Sair" Clicked="BotaoSair" />
+	</ContentPage.ToolbarItems>
+
+	<ContentPage.Content>
+			<ScrollView>
+				<StackLayout Margin="0,22,0,0" HorizontalOptions="Center">
+
+					<Label Text="Escolha uma opção abaixo:" HorizontalTextAlignment="Center" Margin="0,0,0,15"/>
+
+					<Button
+						x:Name="btnPlantao"
+							Clicked="BtnPlantao"
+							Text="Pantão"
+							Style="{x:Static local:AppConstants.ButtonInicial}"/>
+
+						<Button
+							Clicked="BtnEsporte"
+		                    Text="Esporte"
+		                	Style="{x:Static local:AppConstants.ButtonInicial}"/>
+
+					  	<Button
+							Clicked="BtnEconomia"
+		                    Text="Economia"
+		                	Style="{x:Static local:AppConstants.ButtonInicial}"/>
+
+						<Button
+							Clicked="BtnMundo"
+							Text="Mundo"
+		                	Style="{x:Static local:AppConstants.ButtonInicial}"/>
+
+						<Button
+							Clicked="BtnTecnologia"
+		                    Text="Tecnologia"
+		                	Style="{x:Static local:AppConstants.ButtonInicial}"/>
+
+						<Button
+							Clicked="BtnChamarAPI"
+		                    Text="Chamar API"
+							BackgroundColor="Teal"
+		                	Style="{x:Static local:AppConstants.ButtonInicial}"/>
+		         
+				</StackLayout>  
+			</ScrollView>
+		</ContentPage.Content>
+</ContentPage>

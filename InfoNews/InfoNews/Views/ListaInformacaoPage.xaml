@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:local="clr-namespace:InfoNews" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="InfoNews.ListaInformacaoPage"
+		Title="{Binding Name}">
+
+	<ContentPage.Content>
+		<StackLayout Margin="0,10,0,0">
+		    <ListView x:Name="lstInformacoes" ItemSelected="InfoSelected" HasUnevenRows="True">
+		      <ListView.ItemTemplate>
+		        <DataTemplate>
+		          <ViewCell>
+		            <ViewCell.View>
+		              <StackLayout Spacing="3" Margin="5,0,0,0" Orientation="Horizontal">
+		                <StackLayout Orientation="Vertical" Margin="0,10,0,20">
+		                  <Label Text="{Binding Titulo}" FontSize="18" FontFamily="HelveticaNeue-Medium"></Label>
+		                  <Label Text="{Binding DataHora}" Style="{x:Static local:AppConstants.LabelInfoMarron}"></Label>
+		                </StackLayout>
+		              </StackLayout>
+		            </ViewCell.View>
+		          </ViewCell>
+		        </DataTemplate>
+		      </ListView.ItemTemplate>
+		    </ListView>
+	  </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

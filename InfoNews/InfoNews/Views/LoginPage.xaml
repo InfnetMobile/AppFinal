@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:local="clr-namespace:InfoNews" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="InfoNews.LoginPage"
+		Title="{Binding Name}">
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Cadastre-se" Clicked="BotaoCadastro" />
+	</ContentPage.ToolbarItems>
+	
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="StartAndExpand" Margin="0,40,0,0">
+		  <StackLayout.Children>
+
+				<Label 
+					Text="Usuário" 
+					HorizontalTextAlignment="Center"/>
+				
+				<local:CustomLoginEntry 
+						x:Name="nm_usuario" 
+						Placeholder="Digite o seu usuário"/>
+				
+				<Label 
+					Text="Senha" 
+					HorizontalTextAlignment="Center"/>
+
+				<local:CustomLoginEntry 
+						x:Name="nm_senha" 
+						Placeholder="Digite a sua senha"
+						IsPassword="true" />
+
+				<Button Text="Entrar" Clicked="BotaoEntrar" />
+
+			</StackLayout.Children>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
