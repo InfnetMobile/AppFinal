@@ -18,7 +18,7 @@
                    Aspect="AspectFill"
                    IsVisible="{Binding Source={x:Reference Root}, Path=ShowBackgroundImage}"
                    Opacity=".4"
-                   Source="{MenuItemBackgroundImage}" />
+                   Source="{Binding MenuItemBackgroundImage}" />
 
             <StackLayout HorizontalOptions="Center"
                          VerticalOptions="Center"
@@ -34,7 +34,7 @@
                            Opacity="1"
                            Style="{x:Static local:AppConstants.FontIcon}"
                            Text="&#xf111;"
-                           TextColor="{BackgroundColor}" />
+                           TextColor="{Binding BackgroundColor}" />
 
                     <Label HorizontalOptions="Center"
                            VerticalOptions="Center"
@@ -42,13 +42,13 @@
                            HorizontalTextAlignment="Center"
                            Opacity="1"
                            Style="{x:Static local:AppConstants.FontIcon}"
-                           Text="{MenuItemIco}"
+                           Text="{Binding MenuItemIco}"
                            TextColor="White" />
                 </Grid>
 
                 <Label FontSize="14"
                        HorizontalTextAlignment="Center"
-                       Text="{MenuItemName}"
+                       Text="{Binding MenuItemName}"
                        TextColor="{Binding Source={x:Reference Root}, Path=TextColor}" />
             </StackLayout>
 
