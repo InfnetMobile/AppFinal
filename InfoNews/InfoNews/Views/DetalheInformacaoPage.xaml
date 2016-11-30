@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:local="clr-namespace:InfoNews" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="InfoNews.DetalheInformacaoPage"
+		Title="{Binding Name}">
+	
+	<ContentPage.Content>
+		<ScrollView Orientation="Vertical" VerticalOptions="StartAndExpand">
+			 <StackLayout Spacing="3" Margin="5,0,0,0" Orientation="Horizontal">
+	            <StackLayout Orientation="Vertical" Margin="0,10,0,0">
+	              	<Label Text="{Binding Corpo}" Style="{x:Static local:AppConstants.LabelInfo}"></Label>
+	              	<Label Text="{Binding DataHora}" Style="{x:Static local:AppConstants.LabelInfoMarron}"></Label>
+					<Label Text="Editoria" Margin="0,20,0,0" Style="{x:Static local:AppConstants.LabelInfo}"></Label>
+					<Label Text="{Binding Editoria}" Style="{x:Static local:AppConstants.LabelInfo}"></Label>
+	            </StackLayout>
+          </StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

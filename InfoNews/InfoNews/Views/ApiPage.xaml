@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage x:Class="InfoNews.ApiPage"
+			 xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:local="clr-namespace:InfoNews" 
+			 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+			 Title="{Binding Name}">
+
+	<ContentPage.Content>
+		<StackLayout Padding="0" Spacing="0">
+            <StackLayout Padding="20,0,20,20">
+
+				 <Image x:Name="img"
+                   AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                   AbsoluteLayout.LayoutFlags="All"
+                   AnchorY="0"
+                   Aspect="AspectFill"
+                   Scale="1.2"
+                   Source="{Binding Client.Picture.Large}"
+                   TranslationY="-10" />
+
+				<Label VerticalOptions="End"
+                       FontAttributes="Bold"
+                       FontSize="30"
+                       LineBreakMode="WordWrap"
+                       Text="{Binding Client.Name.Title}"
+                       TextColor="Black" />
+    		
+                <Label VerticalOptions="End"
+                       FontAttributes="Bold"
+                       FontSize="30"
+                       LineBreakMode="WordWrap"
+                       Text="{Binding Client.Name.Last}"
+                       TextColor="Black" />
+
+				</StackLayout>
+            </StackLayout>
+	</ContentPage.Content>
+	
+</ContentPage>

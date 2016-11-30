@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:local="clr-namespace:InfoNews" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="InfoNews.AtualizarInformacoesPage"
+		Title="{Binding Name}">
+	
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="StartAndExpand" Margin="0,40,0,0">
+
+			<Entry x:Name="id" Text="{Binding ID}" IsVisible="false"/>
+
+			<Label Text="Nome" HorizontalTextAlignment="Center"/>
+		  	<Entry x:Name="nm_nome" Text="{Binding Nm_Nome}" IsEnabled="false" HorizontalTextAlignment="Center"/>
+
+			<Label Text="Usuário" HorizontalTextAlignment="Center"/>
+		    <Entry x:Name="nm_usuario" Text="{Binding Nm_Usuario}" IsEnabled="false" HorizontalTextAlignment="Center"/>
+
+			<Label Text="Senha" HorizontalTextAlignment="Center"/>
+		    <Entry x:Name="nm_senha" Text="{Binding Nm_Senha}" IsPassword="true" HorizontalTextAlignment="Center"/>
+			
+		  	<Label Text="Email" HorizontalTextAlignment="Center"/>
+		    <Entry x:Name="nm_email" Text="{Binding Nm_Email}" IsEnabled="false" HorizontalTextAlignment="Center"/>
+		   <!--
+		    <Button Text="Salvar" Clicked="saveClicked"/>
+		   
+			<Button Text="Delete" Clicked="deleteClicked"/> -->
+
+		    <Button Text="Voltar" Clicked="cancelClicked"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
