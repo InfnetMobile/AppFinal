@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO;
+using Xamarin.Forms;
 
 using AppFinalMITInfnet.iOS;
 
+[assembly: Dependency(typeof(SQLiteConnection_iOS))]
 namespace AppFinalMITInfnet.iOS
 {
     public class SQLiteConnection_iOS : ISQLiteConnection
