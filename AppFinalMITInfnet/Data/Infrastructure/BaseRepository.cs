@@ -86,11 +86,11 @@ namespace AppFinalMITInfnet
                 if (filter == null)
                     throw new ArgumentNullException(nameof(filter), "Nenhum filtro foi configurado");
 
-                var result = App.dbConn.GetWithChildren<T>(filter, recursive: true);
-                if (result == null)
+                var result = App.dbConn.GetAllWithChildren<T>(filter, recursive: true);
+                if (result == null || result.Count == 0)
                     throw new ArgumentNullException(nameof(result), "Nenhum registro encontrado");
 
-                return result;
+                return result[0];
             }
         }
 
