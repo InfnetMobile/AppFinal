@@ -1,1 +1,15 @@
-﻿teste
+﻿- Acrescentado o caminho completo no backgroundcolor no LoginPage.xaml e HomePage.xaml
+- Trocado a primeira pagina para o login no App.cs
+- Adicionado userdialogs registrando instancia no App.cs
+- Adicionado os registros das outras views na navegação no App.cs
+- Adicionado containers da base no App.cs
+- Adicionado root object no App.cs
+- Adicionado bindings para fazer as ligações no DashboarditemTemplate.xaml
+- Adicionado referência do assembly no SQLiteConnection_iOS.cs
+- Adicionados pacotes do sqlite, prism, forms e pacotes que faltavam
+- Trocamos para GetAllWithChildren e pegamos o primeiro resultado do array no BaseRepository.cs
+- Adicionado o count do array na crítica de vazio no BaseRepository.cs
+- Adicionado arquivo SQLiteConnection_Android.cs para conexão no Droid
+- Acrescentadas as imagens nas pastas drawable e drawable-hdpi
+- Acrescentada a injeção a dependência do repositório base para inicializar o banco de dados no BaseApplicationService.cs
+
