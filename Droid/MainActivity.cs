@@ -27,6 +27,8 @@ namespace AppFinalMITInfnet.Droid
 
 			UserDialogs.Init(this);
 
+			SQLitePCL.Batteries.Init();
+
             LoadApplication(new App());
         }
     }
