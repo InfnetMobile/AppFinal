@@ -1,8 +1,31 @@
+# Solucao Comitada
+
+Arquivo (Linha, Posição) - Descrição
+IOS:
+
+    Pasta View - Mudança para a forma correta Views
+    LoginPage.xaml (8,14) - adição x:Static
+    HomePage.xaml(9,14) - adição x:Static
+    DashboardItemTemplate.xaml(21,20) - adição x:Static local:
+    DashboardItemTemplate.xaml(37,28) - adição x:Static local:AppConstants.
+    DashboardItemTemplate.xaml(45,28) - adição x:Static local:
+    DashboardItemTemplate.xaml(51,24) - adição x:Static local:
+    MainActivity.cs(25) - Error CS0012: The type `Prism.Unity.PrismApplication' is defined in an assembly that is not referenced - Adição da dependência Prism.Unity.Forms`
+    Foundation.MonoTouchException - Registro das páginas e serviços, troca de página no onInitialized
+
+
+Android:
+
+    Adição das bibliotecas do SQLite (Ao tentar iniciar a app gerava erro sem essa biblioteca)
+    Criação do arquivo de conexão SQLiteConnection_Droid
+    Adição da Biblioteca Arc.UserDialogs
+    Adição das imagens a pasta Resources
+
 # App Final - MIT Infnet
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-Boa noite pessoal. Aqui esta o nosso App, nele foram utilizados os seguintes tópicos estudados por nós nas aulas 
+Boa noite pessoal. Aqui esta o nosso App, nele foram utilizados os seguintes tópicos estudados por nós nas aulas
 
   - MVVM
   - Data Bindings
@@ -20,7 +43,7 @@ Vocês deverão:
   - Apontar em qual arquivo e linha estava o erro e qual era
   - Apontar qual fora a solução aplicada
 
-Após a conclusão do trabalho, por favor criem BRANCHS com os nomes das duplas, ex: Rodrigo&Thiago. Assim eu consiguirei pegar o código de cada um ou cada dupla. POR FAVOR ATENÇÃO AO ENVIAR, CRIAR UMA BRANCH NOVA NO REPOSITÓRIO SEGUINDO O PADRÃO DE NOME E FAZER O PUSH NESTA BRANCH 
+Após a conclusão do trabalho, por favor criem BRANCHS com os nomes das duplas, ex: Rodrigo&Thiago. Assim eu consiguirei pegar o código de cada um ou cada dupla. POR FAVOR ATENÇÃO AO ENVIAR, CRIAR UMA BRANCH NOVA NO REPOSITÓRIO SEGUINDO O PADRÃO DE NOME E FAZER O PUSH NESTA BRANCH
 
 #######################################################
 
