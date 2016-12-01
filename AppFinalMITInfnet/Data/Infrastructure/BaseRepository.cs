@@ -87,8 +87,12 @@ namespace AppFinalMITInfnet
                     throw new ArgumentNullException(nameof(filter), "Nenhum filtro foi configurado");
 
                 var result = App.dbConn.GetAllWithChildren<T>(filter, recursive: true);
-                if (result == null || result.Count == 0)
+                if (result == null)
                     throw new ArgumentNullException(nameof(result), "Nenhum registro encontrado");
+
+				//Case when user is not found because it does not exist or user/pwd is incorrect
+				if (result.Count == 0)
+					return null;
 
                 return result[0];
             }
