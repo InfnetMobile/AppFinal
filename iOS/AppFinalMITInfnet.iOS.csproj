@@ -208,9 +208,16 @@
     <Compile Include="Renderers\CustomListViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\login.png" />
     <BundleResource Include="Resources\fontawesome-webfont.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </BundleResource>
+     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+   </BundleResource>
+    <BundleResource Include="Resources\product.png" />
+    <BundleResource Include="Resources\customer.png" />
+    <BundleResource Include="Resources\setup.jpg" />
+    <BundleResource Include="Resources\roadexit.jpg" />
+    <BundleResource Include="Resources\order.jpg" />
+    <BundleResource Include="Resources\company.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\company.jpg" />
