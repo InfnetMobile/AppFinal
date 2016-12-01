@@ -82,16 +82,18 @@ namespace AppFinalMITInfnet
         public T GetByFilter(Expression<Func<T, bool>> filter)
         {
             lock (_lock)
-            {
-                if (filter == null)
-                    throw new ArgumentNullException(nameof(filter), "Nenhum filtro foi configurado");
+             {
+				if (filter == null)
+					throw new ArgumentNullException(nameof(filter), "Nenhum filtro foi configurado");
 
-                var result = App.dbConn.GetWithChildren<T>(filter, recursive: true);
-                if (result == null)
-                    throw new ArgumentNullException(nameof(result), "Nenhum registro encontrado");
+				var result = App.dbConn.GetAllWithChildren<T>(filter, recursive: true);
 
-                return result;
-            }
+				if (result == null || result.Count == 0)
+					return null;
+					//throw new ArgumentNullException(nameof(result), "Nenhum registro encontrado");
+
+				return result[0];
+			}
         }
 
         public T GetById(int id)

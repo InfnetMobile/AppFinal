@@ -18,8 +18,9 @@
                    Aspect="AspectFill"
                    IsVisible="{Binding Source={x:Reference Root}, Path=ShowBackgroundImage}"
                    Opacity=".4"
-                   Source="{MenuItemBackgroundImage}" />
-
+                   Source="{Binding MenuItemBackgroundImage}" />
+                   <!-- adicionado Binding no source para fazer a ligação -->
+			
             <StackLayout HorizontalOptions="Center"
                          VerticalOptions="Center"
                          Orientation="Vertical"
@@ -33,8 +34,9 @@
                            IsVisible="{Binding Source={x:Reference Root}, Path=ShowiconColoredCircleBackground}"
                            Opacity="1"
                            Style="{x:Static local:AppConstants.FontIcon}"
-                           Text="&#xf111;"
-                           TextColor="{BackgroundColor}" />
+                           Text=""
+                           TextColor="{Binding BackgroundColor}" />
+                           <!-- adicionado o Binding no textcolor para fazer a ligação -->
 
                     <Label HorizontalOptions="Center"
                            VerticalOptions="Center"
@@ -42,19 +44,25 @@
                            HorizontalTextAlignment="Center"
                            Opacity="1"
                            Style="{x:Static local:AppConstants.FontIcon}"
-                           Text="{MenuItemIco}"
+                           Text="{Binding MenuItemIco}"
                            TextColor="White" />
-                </Grid>
+					       <!-- adicionado o Binding no text para fazer a ligação -->
+                </Grid>  
 
                 <Label FontSize="14"
                        HorizontalTextAlignment="Center"
-                       Text="{MenuItemName}"
+                       Text="{Binding MenuItemName}"
                        TextColor="{Binding Source={x:Reference Root}, Path=TextColor}" />
+                       <!-- adicionado o Binding no text para fazer a ligação -->
+                           			
             </StackLayout>
 
         </Grid>
+       
+		
     </ContentView.Content>
-    <ContentView.GestureRecognizers>
-        <TapGestureRecognizer Command="{Binding ChooseCorrectPageCommand}" CommandParameter="{Binding .}" />
-    </ContentView.GestureRecognizers>
+		<ContentView.GestureRecognizers>
+        	<TapGestureRecognizer Command="{Binding ChooseCorrectPageCommand}" CommandParameter="{Binding .}" />
+    	</ContentView.GestureRecognizers>
 </ContentView>
+  

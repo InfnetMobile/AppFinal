@@ -22,7 +22,12 @@ namespace AppFinalMITInfnet.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            LoadApplication(new App());
-        }
+			//adicionado
+			//UserDialogs.Init(this);
+			//SQLitePCL.Batteries.Init();
+
+			LoadApplication(new App());
+
+		}
     }
 }

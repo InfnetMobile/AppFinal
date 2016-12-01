@@ -167,6 +167,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="FodyWeavers.xml" />
+    <None Include="ANOTACOES.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\" />
