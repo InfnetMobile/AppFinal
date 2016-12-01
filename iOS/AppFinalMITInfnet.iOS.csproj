@@ -208,16 +208,19 @@
     <Compile Include="Renderers\CustomListViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\login.png" />
     <BundleResource Include="Resources\fontawesome-webfont.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </BundleResource>
-    <BundleResource Include="Resources\product.png" />
-    <BundleResource Include="Resources\customer.png" />
-    <BundleResource Include="Resources\setup.jpg" />
-    <BundleResource Include="Resources\roadexit.jpg" />
-    <BundleResource Include="Resources\order.jpg" />
-    <BundleResource Include="Resources\company.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\company.jpg" />
+    <AndroidResource Include="Resources\customer.png" />
+    <AndroidResource Include="Resources\icon.png" />
+    <AndroidResource Include="Resources\login.png" />
+    <AndroidResource Include="Resources\order.jpg" />
+    <AndroidResource Include="Resources\product.png" />
+    <AndroidResource Include="Resources\roadexit.jpg" />
+    <AndroidResource Include="Resources\setup.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

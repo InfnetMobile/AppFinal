@@ -150,6 +150,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DependencyService\SQLiteConnection_Droid.cs" />
+    <Compile Include="Renderers\AwesomeRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -165,9 +166,38 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\company.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\customer.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\login.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\order.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\product.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\roadexit.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\setup.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\company.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\customer.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\login.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\order.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\product.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\roadexit.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\setup.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\company.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\customer.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\login.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\order.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\product.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\roadexit.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\setup.jpg" />
+    <AndroidResource Include="Resources\drawable\company.jpg" />
+    <AndroidResource Include="Resources\drawable\customer.png" />
+    <AndroidResource Include="Resources\drawable\login.png" />
+    <AndroidResource Include="Resources\drawable\order.jpg" />
+    <AndroidResource Include="Resources\drawable\product.png" />
+    <AndroidResource Include="Resources\drawable\roadexit.jpg" />
+    <AndroidResource Include="Resources\drawable\setup.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DependencyService\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
