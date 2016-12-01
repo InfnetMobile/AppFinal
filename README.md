@@ -5,11 +5,13 @@
 ---
 
 - Corrigir o APP e torná-lo utilizável em ao menos uma plataforma (ideal tanto no iOS quanto no Android)
-> Corrigido em ambas plataformas, Android e iOS.
 
-- Apontar em qual arquivo e linha estava o erro e qual era
-- Apontar qual fora a solução aplicada
-> Passo a passo das correções e modificações nos commits do git.
+  > Corrigido em ambas plataformas, Android e iOS.
+
+- Apontar em qual arquivo e linha estava o erro e qual era e Apontar qual fora a solução aplicada.
+
+  > Passo a passo das correções e modificações nos commits do git.
+
 ---
 
 
