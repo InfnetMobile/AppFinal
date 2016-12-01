@@ -8,6 +8,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+using Xamarin.Forms;
+using Acr.UserDialogs;
+
 namespace AppFinalMITInfnet.Droid
 {
     [Activity(Label = "AppFinalMITInfnet.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -21,6 +24,8 @@ namespace AppFinalMITInfnet.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+			UserDialogs.Init(this);
 
             LoadApplication(new App());
         }
