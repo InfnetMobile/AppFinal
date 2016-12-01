@@ -1,8 +1,19 @@
-# App Final - MIT Infnet
+# App Final - MIT Infnet * Beatriz Macedo
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-Boa noite pessoal. Aqui esta o nosso App, nele foram utilizados os seguintes tópicos estudados por nós nas aulas 
+---
+
+- Corrigir o APP e torná-lo utilizável em ao menos uma plataforma (ideal tanto no iOS quanto no Android)
+> Corrigido em ambas plataformas, Android e iOS.
+
+- Apontar em qual arquivo e linha estava o erro e qual era
+- Apontar qual fora a solução aplicada
+> Passo a passo das correções e modificações nos commits do git.
+---
+
+
+Boa noite pessoal. Aqui esta o nosso App, nele foram utilizados os seguintes tópicos estudados por nós nas aulas
 
   - MVVM
   - Data Bindings
@@ -20,7 +31,7 @@ Vocês deverão:
   - Apontar em qual arquivo e linha estava o erro e qual era
   - Apontar qual fora a solução aplicada
 
-Após a conclusão do trabalho, por favor criem BRANCHS com os nomes das duplas, ex: Rodrigo&Thiago. Assim eu consiguirei pegar o código de cada um ou cada dupla. POR FAVOR ATENÇÃO AO ENVIAR, CRIAR UMA BRANCH NOVA NO REPOSITÓRIO SEGUINDO O PADRÃO DE NOME E FAZER O PUSH NESTA BRANCH 
+Após a conclusão do trabalho, por favor criem BRANCHS com os nomes das duplas, ex: Rodrigo&Thiago. Assim eu consiguirei pegar o código de cada um ou cada dupla. POR FAVOR ATENÇÃO AO ENVIAR, CRIAR UMA BRANCH NOVA NO REPOSITÓRIO SEGUINDO O PADRÃO DE NOME E FAZER O PUSH NESTA BRANCH
 
 #######################################################
 
