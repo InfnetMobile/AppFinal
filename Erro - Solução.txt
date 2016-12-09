@@ -1,0 +1,28 @@
+Marcellus Romagnoli de Almeida
+
+AppFinalMITInfnet:
+
+Inclusão da dependência Prism.Unity.Forms;
+
+Mundaça da pasta View para Views
+
+DashboardItemTemplate.xaml  -  Linha 21  -  Ajuste --> Source="{x:Static local:MenuItemBackgroundImage}"
+
+DashboardItemTemplate.xaml  -  Linha 37  -  Ajuste --> TextColor="{x:Static local:AppConstants.BackgroundColor}" 
+
+DashboardItemTemplate.xaml  -  Linha 45  -  Ajuste --> Text="{x:Static local:MenuItemIco}"
+
+DashboardItemTemplate.xaml  -  Linha 51  -  Ajuste --> Text="{x:Static local:MenuItemName}"
+
+LoginPage.xaml 		        -  Linha  8  -  Ajuste --> BackgroundColor="{x:Static local:AppConstants.DefaultBackgroundColor}"
+
+HomePage.xaml  				-  Linha  9  -  Ajuste --> BackgroundColor="{x:Static local:AppConstants.DefaultBackgroundColor}"
+
+
+Android:
+
+Entrado no app erro de library - Inclusão da library do SQLite
+
+Implementação arquivo de conexão SQLiteConnection_Droid
+
+
